@@ -1,0 +1,29 @@
+form {
+    background-color: rgba(37, 160, 232, 0.699);
+    padding: 20px;
+    border: 1px solid navy;
+    border-radius: 8px;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+
+h1 {
+  background-image: url(/static/assets/photo-1579548122080-c35fd6820ecb.avif);
+  padding: 10px;
+  text-shadow: 3px 3px 1px black;
+
+}
+
+#header{
+    background-color:  rgba(1, 255, 230, 0.467)
+}
+
+#card{
+
+    background-color: rgba(209, 219, 237,.5);
+}
+

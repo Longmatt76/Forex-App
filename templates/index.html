@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Forex Converter{% endblock%}
+{% block content %}
+{% if error_message %}
+<div class="container">
+<div class="alert alert-dark alert-dismissible fade show border-dark fw-bold" role="alert">
+  <strong>{{error_message}}</strong> 
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+{% endif %}
+    <div class="container">
+        <form action="/convert" method="POST">
+            <div class="mb-3">
+              <label for="convert-from" class="form-label">Converting from:</label>
+              <select type="text" class="form-select border-dark" id="convert-from" name="from" placeholder="select a currency">
+              <option selected>Select a currency </option>
+              <option value="USD">USD - US Dollar</option>  
+              <option value="EUR">EUR - Euro</option>  
+              <option value="GBP">GBP - British Pound</option>  
+              <option value="CAD">CAD - Canadian Dollar</option>  
+              <option value="AUD">AUD - Australian Dollar</option>  
+              <option value="JPY">JPY - Japanese Yen</option>  
+              <option value="INR">INR - Indian Rupee</option>  
+              <option value="NZD">NZD - New Zealand Dollar</option>  
+              <option value="CHF">CHF - Swiss Franc</option>  
+              <option value="ZAR">ZAR - South African Rand</option>   
+              <option value="SGD">SGD - Singapore Dollar</option>  
+              <option value="HKD">HKD - Hong Kong Dollar</option>  
+              <option value="CNY">CNY - Chinese Yuan</option>  
+              <option value="MXN">MXN - Mexican Peso</option>  
+              <option value="BRL">BRL - Brazilian Real</option>  
+              <option value="PHP">PHP - Philippine Peso</option>  
+              <option value="IDR">IDR - Indonesian Rupiah</option>  
+              <option value="KRW">KRW - South Korean Won</option>      
+              <option value="TRY">TRY - Turkish Lira</option>     
+            
+            </select>
+            </div>
+            <div class="mb-3">
+              <label for="convert-to" class="form-label">Converting to:</label>
+              <select type="text" class="form-select border-dark" id="convert-to" name="to" placeholder="select a currency">
+                <option selected>Select a currency </option>
+                <option value="USD">USD - US Dollar</option>  
+                <option value="EUR">EUR - Euro</option>  
+                <option value="GBP">GBP - British Pound</option>  
+                <option value="CAD">CAD - Canadian Dollar</option>  
+                <option value="AUD">AUD - Australian Dollar</option>  
+                <option value="JPY">JPY - Japanese Yen</option>  
+                <option value="INR">INR - Indian Rupee</option>  
+                <option value="NZD">NZD - New Zealand Dollar</option>  
+                <option value="CHF">CHF - Swiss Franc</option>  
+                <option value="ZAR">ZAR - South African Rand</option>  
+                <option value="SGD">SGD - Singapore Dollar</option>  
+                <option value="HKD">HKD - Hong Kong Dollar</option>  
+                <option value="CNY">CNY - Chinese Yuan</option>  
+                <option value="MXN">MXN - Mexican Peso</option>  
+                <option value="BRL">BRL - Brazilian Real</option>  
+                <option value="PHP">PHP - Philippine Peso</option>  
+                <option value="IDR">IDR - Indonesian Rupiah</option>  
+                <option value="KRW">KRW - South Korean Won</option>      
+                <option value="TRY">TRY - Turkish Lira</option>      
+               
+              </select>
+            </div>
+            <div 
+            class="mb-3">
+              <label for="amount" class="form-label">Amount:</label>
+              <input type="text" class="form-control border-dark" id="amount" name="amount" placeholder="enter amount">
+            </div>
+            <button type="submit" class="btn btn-dark border-dark">Convert</button>
+          </form>
+    </div>
+    {% endblock%}

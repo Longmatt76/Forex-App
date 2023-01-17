@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title%}Conversion{% endblock %}
+{% block content %}
+<div class="container">
+  
+    <div class="row align-items-center text-center">
+      <div class="col-3">
+        
+      </div>
+      <div class="col-6">
+        <div class="card border-dark">
+            <div class="card-header border-dark" id="header">
+                <h5 class="card-title p-1 display-6 fw-bold">Conversion Result</h5> 
+            </div>
+            <div class="card-body" id="card">
+              <p class="card-text fs-2"> {{symbol_one | safe }}{{amount}} {{base_cur}} = {{symbol_two | safe }}{{result}} {{dest_cur}}</p>
+              <a href="/" class="btn btn-dark border-dark">Return Home</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-3">
+        
+      </div>
+    </div>
+    
+  </div>
+  {% endblock %}
+
+  
+
+  
